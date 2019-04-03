@@ -18,7 +18,7 @@ server.use(session({
         maxAge:1000*60*60 //辅助session工作
     }
 }));
-server.listen(3000);
+server.listen(5050);
 // const cors=require("cors");
 // server.use(cors({
 //    origin:["http://127.0.0.1:3000","http://localhost:3000"],
