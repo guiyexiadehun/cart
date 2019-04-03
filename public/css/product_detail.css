@@ -1,0 +1,342 @@
+.w1360{
+    width: 1360px;
+    margin: 0 auto;
+}
+/*.myheader{*/
+    /*width:100%;*/
+    /*height:248px;*/
+/*}*/
+/*.myfooter{*/
+    /*width:100%;*/
+    /*height:669px;*/
+/*}*/
+hr{
+    margin-top:0;
+}
+.detail_top{
+    margin-top:0;
+}
+.detail_top .detail_bread{
+    font-size: 13px;
+    color: #333;
+    margin-left: 9px;
+    height: 70px;
+    line-height: 70px;
+}
+.detail_bread a,.detail_bread span{
+    color: #333;
+    padding-left: 6px;
+}
+.w1000{
+    width: 1000px;
+    margin: 0 auto;
+}
+.canshu_l{
+    width: 460px;
+    position: relative;
+    float: left;
+}
+.canshu_l ul.img_lg li{list-style: none;width: 458px;
+    height: 458px;
+    border: 1px solid #f3f3f3;
+    position: absolute;}
+.canshu_l ul.img_lg{height:460px;position: relative;}
+.canshu_l ul.img_lg li img{width:458px;}
+.canshu_l ul.img_sm li{list-style: none;width: 60px;
+    height: 60px;
+    float:left;
+    margin-right:20px;
+}
+.canshu_l ul.img_sm{position: relative;
+    height: 60px;
+    padding: 20px 0;}
+.canshu_l ul.img_sm li img{width: 100%;
+    vertical-align: middle;}
+ul.img_sm li:hover{
+    border:1px solid #dd4242;
+}
+.canshu_r{width:520px;float: left;margin-left: 18px;}
+.canshu_r h2{
+    font-size: 24px;
+    color: #000;
+    font-weight: 400;
+}
+div.price{
+    overflow: hidden;
+    height: 34px;
+    line-height: 34px;
+    margin:14px 0;
+}
+.price span{color: #8b766c;
+    font-size: 24px;float:left;}
+.price a{
+    font-size: 12px;
+    color: #999;
+    float:right;
+}
+ul.ringbuy_sale{
+    overflow: hidden;
+    background: #f8f8f8;
+    border-top: 1px dashed #ddd;
+    border-bottom: 1px dashed #ddd;
+    padding: 7px 0;
+    margin-top: 10px;
+}
+.ringbuy_sale li:first-child {
+    border: none;
+    width: 170px;
+}
+.ringbuy_sale li {
+    float: left;
+    height: 23px;
+    line-height: 23px;
+    border-left: 1px dashed #ddd;
+    width: 173px;
+    text-align: center;
+    list-style: none;
+    font-size: 12px;
+    color: #999;
+}
+.ringbuy_sale i {
+    color: #ffacac;
+    font-style: inherit;
+}
+.ringbuy_choose {
+    background: #f8f8f8;
+    padding: 20px;
+    font-size: 0;
+    padding-right: 0;
+    margin-top: 10px;
+}
+.ringbuy_choose-first{
+    margin-bottom: 14px;
+}
+.ringbuy_choose span {
+    vertical-align: middle;
+    color: #838383;
+    font-size: 12px;
+    margin-right: 12px;
+    display: inline-block;
+    width: 50px;
+    text-align: left;
+}
+.ringbuy_choose i{
+    vertical-align: middle;
+    display: inline-block;
+    padding: 0 4px;
+    text-align: center;
+    font-size: 12px;
+    color: #666;
+    cursor: pointer;
+    margin-right: 5px;
+    font-style:inherit;
+    border: 1px solid #afafb0;
+    background: #fff;
+    min-width: 90px;
+    height: 28px;
+    line-height: 28px;
+}
+.ringbuy_choose-first i:hover{
+    min-width: 88px;
+    height: 26px;
+    line-height: 26px;
+    border: 2px solid #907c73;
+    background: url(../img/product_detail/right.png) no-repeat right bottom;
+}
+.ringbuy_choose-second{
+    position: relative;
+}
+.ringbuy_choose-second span.fl {
+    margin-top: 8px;    vertical-align: middle;float: left;
+}
+.ringbuy_button {
+    margin: 30px 0 30px 20px;
+}
+.ringbuy_button a {
+    display: inline-block;
+    font-size: 16px;
+    margin-right: 10px;
+    vertical-align: middle;
+    text-decoration: none;
+}
+.to_shopcart {
+    width: 180px;
+    height: 40px;
+    line-height: 40px;
+    text-align: center;
+    background: #a98f83;
+    color: #fff;
+}
+.to_shopcart span {
+    background: url(../img/product_detail/shopcart.png) no-repeat left center;
+    padding-left: 26px;
+}
+.to_buyit{
+    width: 178px;
+    height: 38px;
+    line-height: 38px;
+    text-align: center;
+    background: #fff;
+    border: 1px solid #8b766c;
+    color: #8b766c;
+}
+.ringbuy_button i.to_joinGift {
+    background: url(../img/product_detail/gift.png) no-repeat left center;
+    color: #c57d5c;
+    font-size: 13px;
+}
+.ringbuy_button i{
+    display: inline-block;
+    vertical-align: middle;
+    height: 20px;
+    line-height: 20px;
+    padding-left: 26px;
+    margin-left: 10px;
+    cursor: pointer;
+    font-style: inherit;
+}
+.ringbuy_delivery {
+    font-size: 12px;
+    color: #838383;
+    padding-left: 20px;
+    border-bottom: 1px dashed #ddd;
+    padding-bottom: 10px;
+}
+.ringbuy_Promise {
+    padding: 14px 0 14px 20px;
+    border-bottom: 1px dashed #ddd;
+    font-size: 0;
+}
+.ringbuy_Promise strong {
+    font-size: 12px;
+    color: #838383;
+    vertical-align: middle;
+    margin-right: 12px;
+    font-weight: bold;
+}
+.ringbuy_Promise span {
+    display: inline-block;
+    vertical-align: middle;
+    font-size: 12px;
+    color: #838383;
+    height: 24px;
+    line-height: 24px;
+    padding-left: 28px;
+    margin-right: 14px;
+}
+.Promise_first {
+    background: url(../img/product_detail/sev_first.png) no-repeat left center;
+}
+.Promise_sec {
+    background: url(../img/product_detail/sev_sec.png) no-repeat left center;
+}
+.Promise_third {
+    background: url(../img/product_detail/sev_third.png) no-repeat left center;
+}
+.ringbuy_Details-tab, .ringbuy_hotdp-top {
+    position: relative;
+    text-align: center;
+    border-bottom: 2px solid #eaeceb;
+    font-size: 0;
+    height: 25px;
+    margin-bottom: 0;
+}
+.ringbuy_hotdp-top span:first-child {
+    border-left: none;
+}
+.ringbuy_Details-tab span, .ringbuy_hotdp-top span {
+    font-size: 12px;
+    color: #999;
+    display: inline-block;
+    width: 165px;
+    text-align: center;
+    border-left: 2px solid #eaeceb;
+    height: 14px;
+    cursor: pointer;
+}
+.ringbuy_hotdp-top strong {
+    display: inline-block;
+    width: 130px;
+    margin: 0 auto;
+    height: 25px;
+    font-weight: bold;
+}
+.ringbuy_hotdp-top .Details-tab-click strong {
+    border-bottom: 2px solid #222;
+    color: #222;
+}
+.ringbuy_Details-tab strong, .ringbuy_hotdp-top strong {
+    display: inline-block;
+    width: 130px;
+    margin: 0 auto;
+    height: 25px;
+}
+.hot_recommend{
+    height:190px;margin:20px auto;position: relative;
+}
+.hot_pre{
+     background: url(../img/product_detail/pre_next.png) no-repeat;
+     position:absolute;
+     top:50%;left:10px;
+     width: 10px;
+     height: 19px;margin-top: -10px;
+     background-position: 0 -19px;
+ }
+.hot_next{
+    background: url(../img/product_detail/pre_next.png) no-repeat;
+    position:absolute;
+    top:50%;right:10px;
+    width: 10px;
+    height: 19px;margin-top: -10px;
+    background-position: -10px 0;
+
+}
+.recommend_all{width:956px;height:200px;position:absolute;top:0;left:20px;overflow: hidden;}
+.recommend_all ul{
+    display: flex;
+    list-style: none;
+    justify-content: space-between;
+    padding-left:50px;
+}
+.recommend_all ul li{width: 130px;text-align: center;margin-right: 50px;}
+.recommend_all ul li img{height:130px;}
+.recommend_all ul li p{
+    font-size: 12px;
+    color: #888;
+    line-height: 20px;
+}
+.recommend_all ul li p:last-child{
+    color:#8b766c;
+}
+
+.canshu:after,.price:after{content:"";display: block;
+    clear: both;}
+.biggest{
+    width:460px;
+    height:460px;
+    position: absolute;
+    top:0px;
+    left:460px;
+    z-index:99;
+    border: 1px solid rgba(0, 0, 0, 0.125);
+    /* background-image: url(../img/product_detail/01.jpg); */
+    background-size:920px 920px;
+    overflow:hidden;
+}
+.d-none{
+    display:none;
+}
+#mask{
+    width: 230px;
+    height:230px;
+    position: absolute;
+    z-index: 99;
+    background:yellow;
+    border: 1px solid rgba(0, 0, 0, 0.125);
+    opacity: 0.2;
+}
+#super-mask{
+    width:460px; height:460px;
+    z-index: 99;
+    position: absolute;
+  }

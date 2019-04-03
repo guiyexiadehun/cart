@@ -1,0 +1,58 @@
+<!doctype html>
+<html>
+	<head>
+		<title></title>
+		<link rel="stylesheet" href="css/query.css">
+		<meta charset="utf-8"/>
+	</head>
+<body>
+	<div class="w1360">
+		<div class="query_head">
+				<a href="#">
+					<img src="img/dr_logo.png">
+				</a>
+				<span>找回密码</span>
+		</div>
+		<div class="clear"></div>
+		<div class="line"></div>
+		<div class="query_bg">
+			<table></table>
+			<div class="query_form">
+					<h4>找回密码</h4>
+					<span>
+						请输入您的用户名
+					</span>
+					<input type="text" id="uname" placeholder="请输入您的用户名">
+					<div id="d1"></div>
+					<span>
+						请输入您的手机号
+					</span>
+					<input type="text" id="phone" placeholder="请输入您的手机号">
+					<div id="d2"></div>
+					<input type="button" id="btn" value="申请找回" onclick="query()">
+			</div>
+		</div>
+	</div>
+	<script>
+		//ajax查询请求
+		function query(){
+			var xhr=new XMLHttpRequest();
+			xhr.onreadystatechange=function(){
+				if(xhr.readyState==4 && xhr.status==200){
+					var result=xhr.responseText;
+					if(result=="1"){
+						alert("用户名或者密码错误");
+					}else{
+						var arr=JSON.parse(result);
+						alert("密码为："+arr[0].upwd);
+					}
+				}
+			}
+			xhr.open("post","/user/query",true);
+			xhr.setRequestHeader("Content-Type","application/x-www-form-urlencoded");
+			var formdata="uname="+uname.value+"&phone="+phone.value;
+			xhr.send(formdata);
+		}
+	</script>
+</body>
+</html>

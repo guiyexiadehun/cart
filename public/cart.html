@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/cart.css"/>
+    <script src="http://libs.baidu.com/jquery/2.0.0/jquery.min.js">
+    </script>
+    <script src="js/cart.js"></script>
+    <script src="js/jquery-3.2.1.js"></script>
+</head>
+<body>
+<header id="header">
+    <!--<iframe class="myheader" src="header.html" frameborder="0" scrolling="0"></iframe>-->
+</header>
+<div class="w1360">
+<div class="shopping">
+    <div class="shopping_top">
+        <h3>购物车</h3>
+        <div class="shopping_steps">
+            <div class="sp_steps1">
+                <span>1</span>
+                <p>1.我的购物车</p>
+            </div>
+            <div class="sp_steps2">
+                <span>2</span>
+                <p>2. 填写订单信息 / 签署真爱协议</p>
+            </div>
+            <div class="sp_steps3">
+                <span>3</span>
+                <p>3.付款 完成购买</p>
+            </div>
+        </div>
+    </div>
+    <div class="shopping_list">
+        <div class="shopping_title">
+            <input type="checkbox" id="selectAll">
+            <span class="sel_all">全选</span>
+            <span class="title_pname">商品</span>
+            <span class="title_price">价格</span>
+            <span class="handle">操作</span>
+        </div>
+        <div class="shopping_cart">
+            <div class="null_cart">
+                <div>
+                    <img src="img/ico-cart.png">
+                    <p>您的购物车内暂无商品,去看看心仪的商品吧</p>
+                    <a href="product_list.html">选择 求婚钻戒</a>
+                    <a href="javascript:;">查看 礼物清单</a>
+                </div>
+            </div>
+            <ul id="shopCart">
+                <!-- <li>
+                   <input type="checkbox"> 
+                   <img src="img/cpring/cp4.jpg">
+                   <p class="pname">WITH YOU系列黑骑士 男戒 14分</p>
+                   <p class="pfamily">男戒</p>
+                   <p class="price">￥22558</p>
+                   <button class="remove">移除</button>
+                </li> -->
+                <!-- <li>
+                    <input type="checkbox"> 
+                    <img src="img/cpring/cp4.jpg">
+                    <p class="pname">WITH YOU系列黑骑士 男戒 14分</p>
+                    <p class="pfamily">男戒</p>
+                    <p class="price">￥22558</p>
+                    <button class="remove">移除</button>
+                </li> -->
+            </ul>
+        </div>
+        <div class="shopping_total">
+            <p class="pay_ex">支付安全保障 安全支付系统采用SSL加密</p>
+            <p class="pay_ex1">全程保价</p>
+            <p class="pay_ex2">支持全球配送</p>
+            <p class="howM">共选了<span>2</span>件商品</p>
+            <p class="total">总价：<span></span></p>
+            <a href="javascript:;">移出购物车</a>
+        </div>
+    </div>
+</div>
+</div>
+<footer id="footer">
+        <!--<iframe class="myfooter" src="footer.html" frameborder="0" scrolling="0"></iframe>-->
+</footer>
+<script>
+    //获取头部文件
+    $(document).ready(function(){
+        $("header").load("header.html");
+    });
+    //获取尾部文件
+    $(document).ready(function(){
+        $("footer").load("footer.html");
+    });
+</script>
+<!-- <script src="js/fixed.js"></script> -->
+</body>
+</html>

@@ -1,0 +1,80 @@
+div.query_mid{
+	margin-top:15px;
+	font-size:13px;
+}
+div.side_bar{
+	width:15%;
+	border:1px solid #cfcfcf;
+	background:#fafafa;
+	float:left;
+	margin-right:9px;
+}
+div.info{
+	width:80%;
+	border:1px solid #cfcfcf;
+	float:left;
+	padding:0 12px;
+	background:#fafafa;
+}
+div.side_bar li{
+	color:#999;
+	padding-top:12px;
+}
+div.side_bar span{
+	color:#8b766c;
+	font-weight:20px;
+}
+div.side_bar img{
+	padding-right:10px;
+	margin-left:-25px;
+	vertical-align:middle;
+}
+div.info table td span{
+	width:158px;
+	height:20px;
+	color:#cbcbcb;
+	padding-left:10px;
+}
+div.info table td{
+	vertical-align:top;
+	padding-top:20px;
+}
+div.info table td h3{
+  display:inline;
+	color:red;
+	margin-right:5px;
+}
+div.info table td #img{
+	width:80px;
+	height:80px;
+	border-radius:50%;
+	border:1px solid #9e9898;
+	background:url(../img/dr_logo.png) no-repeat center center;
+	background-size:contain;
+	vertical-align:middle;
+	display:inline-block;
+}
+	
+div.info #tijiao{
+	text-align:center;margin-bottom:12px;
+}
+div.info .btn{
+	width:300px;
+	height:33px;
+	border-radius:3px;
+	background:#fff;
+	border:1px solid #8b766c;
+	color:#8b766c;
+	font-weight:bolder;
+	cursor:pointer;
+}
+#uname,#user_name{
+	width:230px;
+	height:25px;
+	background:#fff;
+	border:1px solid #8b766c;
+	border-radius:3px;
+}
+div.info table td input.sex{
+	padding-left:0;
+}

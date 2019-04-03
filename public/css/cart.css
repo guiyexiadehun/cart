@@ -1,0 +1,243 @@
+.shopping{
+    width:100%;
+    position: relative;
+    border-top:1px solid black;
+}
+.shopping_top{
+    margin-top:40px;
+}
+.shopping_top h3{
+    border-left: 2px solid #97847b;
+    font-size: 18px;
+    color: #333;
+    padding-left: 15px;
+    display: inline-block;
+    float: left;
+    font-weight: 400;
+}
+.shopping_steps{
+    float: right;
+}
+.shopping_steps div{
+    width: 198px;
+    float: left;
+    text-align: center;
+    color: #cbcbcb;
+    font-size: 12px;
+    display: inline;
+}
+.sp_steps1 span,.sp_steps2 span,.sp_steps3 span{
+    display: block;
+    width: 100%;
+    height: 100%;
+    line-height: 23px;
+    color: #fff;
+    letter-spacing: -2px;
+    margin-bottom: 10px;
+    background: #cbcbcb url(../img/steps_bg.png) center no-repeat;
+    background-position: left center;
+    background-color:lightgrey;
+}
+.sp_steps1 span{
+    background-color: #8b766c;
+}
+.sp_steps1 p{
+    color: #8b766c;
+}
+.shopping_top:after{
+    content:"";
+    display:block;
+    clear:both;
+}
+.shopping_list{
+    position:relative;
+    margin-top:20px;
+}
+.shopping_title{
+    width:100%;
+    height:52px;
+    background:#f3f3f3;
+    border:1px solid #e0e0e0;
+    font-size: 13px;
+}
+.shopping_title span{
+    line-height: 52px;
+    position: absolute;
+    display: inline-block;
+}
+.shopping_title input{
+    position: absolute;
+    left:30px;top:21px;
+}
+.shopping_title .sel_all{
+    left:50px;
+}
+.shopping_title .title_pname{
+    left:280px;
+}
+.shopping_title .title_price{
+    right:300px;
+}
+.shopping_title .handle{
+    right:100px;
+}
+.shopping_cart{
+    width:100%;
+    position:relative;
+    border:1px solid #e0e0e0;
+    margin-top:20px;
+    margin-bottom:20px;
+}
+.null_cart{
+    position:relative;
+    height:240px;
+    background: #fafafa;
+    display:none;
+}
+.null_cart div{
+    position: absolute;
+    top:82px;
+    width:800px;
+    left:38%;
+}
+.null_cart img{
+    position: absolute;
+    top:0px;
+    left:0px;
+}
+.null_cart p{
+    position: absolute;
+    top:0px;
+    left:90px;
+    font-size:14px;
+    color:#666;
+}
+.null_cart p~a{
+    display: inline-block;
+    padding: 6px 10px;
+    color: #8b766c;
+    border: 1px solid #8b766c;
+    font-size: 12px;
+}
+.null_cart p+a{
+    position: absolute;
+    top:30px;
+    left:90px;
+}
+.null_cart p+a+a{
+    position: absolute;
+    top:30px;
+    left:210px;
+}
+.shopping_cart ul li{
+    position: relative;
+    list-style: none;
+    display: inline-block;
+    font-size: 14px;
+    width:100%;
+    height:110px;
+    border-bottom: 1px dotted #e0e0e0;
+    box-sizing: border-box;
+}
+.shopping ul li img{
+    width:100px;
+    height:100px;
+    position: absolute;
+    top:8px;
+    left:157px;
+}
+.shopping_cart ul li input{
+    position: absolute;
+    top:50px;
+    left:30px;
+}
+.shopping ul li .pname{
+    position: absolute;
+    top:49px;
+    left:300px;
+    font-weight: bolder;
+}
+.shopping ul li .pfamily{
+    position: absolute;
+    top:49px;
+    left:550px;
+    font-weight: bolder;
+    color:#8b766c;
+}
+.shopping ul li .price{
+    position: absolute;
+    top:49px;
+    right:283px;
+    font-weight: bolder;
+    color:#ff5d5b;
+}
+.shopping ul li .remove{
+    position: absolute;
+    top:40px;
+    right:78px;
+    width:78px;
+    height:30px;
+    color:#8b766c;
+}
+.shopping_total{
+    width:100%;
+    height:60px;
+    background:#f3f3f3;
+    border:1px solid #e0e0e0;
+    position: relative;
+    font-size: 13px;
+}
+.shopping_total .howM{
+    position: absolute;
+    right:400px;
+    line-height: 60px;
+}
+.shopping_total .total{
+    position: absolute;
+    right:286px;
+    line-height: 60px;
+}
+.shopping_total p span{
+    font-weight: bolder;
+    color:#ff5d5b;
+    font-size: 14px;
+}
+.shopping_total a{
+    display: inline-block;
+    width: 200px;
+    font-size: 14px;
+    font-weight: 700;
+    line-height: 60px;
+    background: #a98f83;
+    color: #fff;
+    text-align: center;
+    position: absolute;
+    right:0;
+}
+.pay_ex{
+    line-height:20px;
+    background: url(../img/ico-service.png) 0px -70px no-repeat;
+    position: absolute;
+    height:20px;
+    left:24px;
+    padding-left:20px;
+    top:20px;
+}
+.pay_ex1{
+    line-height:20px;
+    background: url(../img/ico-service.png) 0px -35px no-repeat;
+    position: absolute;
+    height:20px;
+    left:300px;
+    padding-left:24px;
+    top:20px;
+}
+.pay_ex2{
+    line-height:20px;
+    background: url(../img/ico-service.png) 0px 0px no-repeat;
+    position: absolute;
+    height:20px;
+    left:395px;
+    padding-left:24px;
+    top:20px;
+}

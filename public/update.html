@@ -1,0 +1,148 @@
+<!doctype html>
+<html>
+	<head>
+		<title></title>
+		<link rel="stylesheet" href="css/query.css">
+		<link rel="stylesheet" href="css/update.css">
+		<meta charset="utf-8"/>
+	</head>
+<body>
+	<div class="w1360">
+		<div class="query_head">
+				<a href="index.html">
+					<img src="img/dr_logo.png">
+				</a>
+				<span>修改个人资料</span>
+		</div>
+		<div class="clear"></div>
+		<div class="line"></div>
+		<div class="query_mid">
+			<div class="side_bar">
+				<ul>
+					<img src="img/icon5.png">
+					<span>账户设置</span>
+					<li>个人资料</li>
+					<li>绑定账号</li>
+					<li>修改密码</li>
+					<li>地址管理</li>
+				</ul>
+			</div>
+			<div class="info">
+				<p>个人资料</p>
+				<hr>
+				<table>
+					<tr>
+						<td>头像</td>
+						<td><div id="img"></div><span>支持JPG、PNG格式</span></td>
+					</tr>
+					<tr>
+						<td><h3>*</h3>会员昵称：</td>
+						<td><input type="text" id="uname" onblur="selects()"><span>4~16位字符</span>
+						</td>
+					</tr>
+					<tr>
+						<td>真实姓名：</td>
+						<td><input type="text" id="user_name"><span>4~16位字符</span></td>
+					</tr>
+					<tr>
+						<td>性别：</td>
+						<td>
+							<input type="radio" id="man" class="sex"><label for="man">男</label>
+							<input type="radio" id="woman" class="sex"><label for="woman">女</label>
+						</td>
+					</tr>
+					<tr>
+						<td>情感状态：</td>
+						<td>
+							<input type="radio" id="alone"><label for="alone">单身</label>
+							<input type="radio" id="inlove"><label for="inlove">恋爱中</label>
+							<input type="radio" id="marry"><label for="marry">已婚</label>
+						</td>
+					</tr>
+					<tr>
+						<td>真爱宣言：</td>
+						<td><textarea id="love" cols="30" rows="10"></textarea></td>
+					</tr>
+					<tr>
+						<td>个人喜好：</td>
+						<td><textarea id="hobby" cols="30" rows="10"></textarea></td>
+					</tr>
+				</table>
+				<div id="tijiao">
+						<input type="button" value="提交" class="btn" onclick="update()">
+				</div>
+			</div>
+		</div>
+	</div>
+	<script>
+		//ajax查询请求
+		function selects(){
+			var xhr=new XMLHttpRequest();
+			xhr.onreadystatechange=function(){
+				if(xhr.readyState==4 && xhr.status==200){
+					var result=xhr.responseText;
+					if(result=="0"){
+						alert("该用户不存在");
+					}else{
+						var arr=JSON.parse(result);
+						user_name.value=arr[0].user_name;
+						love.value=arr[0].love;
+						hobby.value=arr[0].hobby;
+						if(arr[0].sex=="0"){
+							woman.checked=true;
+						}else if(arr[0].sex=="1"){
+							man.checked=true;
+						}
+						if(arr[0].emotion=="0"){
+							alone.checked=true;
+						}else if(arr[0].emotion=="1"){
+							inlove.checked=true;
+						}else if(arr[0].emotion=="2"){
+							marry.checked=true;
+						}
+					}
+				}
+			}
+			xhr.open("post","/user/select",true);
+			xhr.setRequestHeader("Content-Type","application/x-www-form-urlencoded");
+			var formdata="uname="+uname.value;
+			//console.log(formdata);
+			xhr.send(formdata);
+		}
+		function update(){
+					var xhr=new XMLHttpRequest();
+					//console.log(xhr);
+					xhr.onreadystatechange=function(){
+						if(xhr.readyState==4 && xhr.status==200){
+							var result=xhr.responseText;
+							if(result=="1"){
+								alert("修改成功");
+								//使用js的bom操作
+							}else{
+								alert("修改失败");
+							}
+						}
+					}
+					var gender='';
+					if(man.checked){
+						gender="1";
+					}else if(woman.checked){
+						gender="0";
+					}
+					var emotion;
+					if(alone.checked){
+						emotion="0";
+					}else if(inlove.checked){
+						emotion="1";
+					}else if(marry.checked){
+						emotion="2";
+					}
+					var url="/user/update";
+					xhr.open("post",url,true);
+					xhr.setRequestHeader("Content-Type","application/x-www-form-urlencoded");
+					var formdata="user_name="+user_name.value+"&love="+love.value+"&hobby="+hobby.value+"&gender="+gender+"&emotion="+emotion+"&uname="+uname.value;
+					xhr.send(formdata);
+				}
+	</script>
+</body>
+</html>

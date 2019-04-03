@@ -1,0 +1,70 @@
+.w1360{
+	width:1360px;
+	margin:0 auto;
+}
+div.query_head{
+	margin-top:20px;
+	float:left;
+}
+
+div.query_head span{
+	font:600 20px 微软雅黑;
+	margin:36px 20px;
+}
+div.clear{
+	clear:both;
+}
+div.line{
+	background:url(../img/footer_line.png);
+	height: 16px;
+}
+div.query_bg{
+	background:url(../img/query_bg.jpg);
+	background-size:contain;
+	height:640px;
+	margin:0 auto;
+}
+div.query_form{
+	width:800px;
+	height:380px;
+	background:rgba(255, 255, 255, 0.8);
+	margin:130px auto;
+	text-align:center;
+	border-radius:3% 3%;
+	border:8px solid #f8c5ca;
+}
+div.query_form span{
+	display:block;
+	margin:20px 196px 2px 0;
+	font-size:13px;
+	font-weight:bold;
+	color:#cb2f40;
+}
+div.query_form h4{
+	color:#cb2f40;
+	font-size:20px;
+}
+div.query_form input{
+	margin:0 auto;
+	width:300px;
+	height:33px;
+	border:1px solid #e6e6e6;
+	border-radius:4px;
+	line-height:38px;
+	outline:0;
+	padding:0px 2px;
+	display:block;
+	padding-left:5px;
+}
+div.query_form #btn{
+	margin-top:30px;
+	background:#f59ca0;
+	font-size:16px;
+	color:white;
+	height:40px;
+	line-height:40px;
+	cursor:pointer;
+}
+div.query_form #btn:hover{
+	background:#cb2f40;
+}

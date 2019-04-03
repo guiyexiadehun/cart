@@ -1,0 +1,189 @@
+<!doctype html>
+<html>
+	<head>
+		<title></title>
+		<link rel="stylesheet" href="css/login.css">
+		<meta charset="utf-8"/>
+	</head>
+<body>
+	<div class="w1360">
+		<header class="login_head">
+			<div class="loginhead_left">
+				<a href="#">
+					<img src="img/dr_logo.png">
+				</a>
+			</div>
+			<div class="loginhead_right">
+				<li class="loginhead_rightli">
+					<a href="login.html">登录/注册</a>
+				</li>
+				<li class="loginhead_rightli">
+					<img src="img/phone.png">400 888 888
+				</li>
+				<li class="loginhead_rightli">帮助中心></li>
+			</div>
+		</header>
+		<div class="login_banner">
+			<img src="img/login_bg.jpg">
+			<div class="login_bg">
+				<form action="/user/login" method="post" id="loginform">
+					<h3>登录</h3>
+					<input type="text" id="uname" placeholder="请输入您的用户名" onblur="show()">
+					
+					<div id="d1"></div>
+					
+					<input type="password" id="upwd" placeholder="请输入密码" onblur="show1()">
+					
+					<div id="d2"></div>
+					
+					<input type="checkbox">
+					<span id="s1">同意用户注册协议和隐私条款</span>	
+					
+					
+					<a href="#" id="login_btn" onclick="login()">登 录</a>
+					<div class="login_tz">
+						<a href="reg.html" id="reg_a">新用户注册</a>
+						<a href="query.html" id="query_a">忘记密码？</a>
+					</div>
+				</form>
+			</div>
+		</div>
+		<div class="dr_footer">
+				<div class="dr_footer_line">
+				</div>
+				<div class="w1000">
+					<ul class="dr_footer_icon">
+						<li>
+							<a href="#">
+								<i class="footer_icon1"></i>
+								<span>权威认证</span>
+							</a>
+						</li>
+						<li>
+							<a href="#">
+								<i class="footer_icon2"></i>
+								<span>一钻双证</span>
+							</a>
+						</li>
+						<li>
+							<a href="#">
+								<i class="footer_icon3"></i>
+								<span>终生保养</span>
+							</a>
+						</li>
+						<li>
+							<a href="#">
+								<i class="footer_icon4"></i>
+								<span>以小换大</span>
+							</a>
+						</li>
+						<li>
+							<a href="#">
+								<i class="footer_icon5"></i>
+								<span>15天退换</span>
+							</a>
+						</li>
+						<li>
+							<a href="#">
+								<i class="footer_icon6"></i>
+								<span>全国免运费</span>
+							</a>
+						</li>
+						<li>
+							<a href="#">
+								<i class="footer_icon7"></i>
+								<span>全程保险</span>
+							</a>
+						</li>
+					</ul>
+				</div>
+				<div class="dr_footer_mid">
+					<div class="w1000">
+					<ul class="footer_mid">
+						<li>
+							<h4>关于我们</h4>
+							<a href="">权威认证</a>
+							<a href="">合作专区</a>
+							<a href="">加入我们</a>
+						</li>
+						<li>
+							<h4>购物指南</h4>
+							<a href="">购买流程</a>
+							<a href="">支付方式</a>
+							<a href="">配送流程</a>
+						</li>
+						<li>
+							<h4>售后服务</h4>
+							<a href="">退货流程</a>
+							<a href="">办理售后</a>
+							<a href="">15天退换</a>
+						</li>
+						<li>
+							<h4>帮助中心</h4>
+							<a href="">注册流程</a>
+							<a href="">联系客服</a>
+							<a href="">网站地图</a>
+						</li>
+						<li id="qx">
+							<h4>服务条款</h4>
+							<a href="">终生保养</a>
+							<a href="">注册协议</a>
+							<a href="">隐私声明</a>
+						</li>
+					</ul>
+				</div>
+				<div class="dr_footer_focus">
+					<h4>关注我们</h4>
+					<p>
+						一个让你相信真爱的地方，给你实用的情感指南，为你的爱情终身服务。
+					</p>
+					<p id="focus"></p>
+					<p id="focus1"></p>
+				</div>
+				<div class="dr_bottom">
+					<div class="dr_bottom_a">
+						<a href="">隐私政策</a>
+						<a href="">网站地图</a>
+						<a href="">友情链接</a>	
+					</div>
+					<span><img src="img/icon_police.png">粤公网安备 xxxxxxxxxxxxxxx号/ 粤ICP备11111111号-1/Copyright©2019-2029 www.ido.com i do珠宝 All Rights Reserved.&nbsp;<i><img src="img/kxzd.png"></i></span>
+				</div>
+			</div>
+		</div>
+	</div>
+	<script>
+		//判断用户名是否为空
+		function show(){
+			if(uname.value==""){
+				d1.innerHTML="用户名不能为空！"
+			}
+		}
+		//判断密码是否为空
+		function show1(){
+			if(upwd.value==""){
+				d2.innerHTML="密码不能为空！"
+			}
+		}
+		//ajax登录请求
+		function login(){
+			var xhr=new XMLHttpRequest();
+			xhr.onreadystatechange=function(){
+				if(xhr.readyState==4 && xhr.status==200){
+					var result=xhr.responseText;
+					var result=JSON.parse(result);
+					if(result.length>0){
+						var uid=result[0].uid;
+					window.location.href=`http://127.0.0.1:3000/index.html?uid=${uid}`
+					}else{
+						alert("用户名或密码错误");
+					}
+				}
+			}
+			xhr.open("post","user/login",true);
+			xhr.setRequestHeader("Content-Type","application/x-www-form-urlencoded");
+			var formdata="uname="+uname.value+"&upwd="+upwd.value;
+			xhr.send(formdata);
+		}
+	</script>
+</body>
+</html>
